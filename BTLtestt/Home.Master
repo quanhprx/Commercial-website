@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.Master.cs" Inherits="BTLtestt.Home" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Cửa hàng thời trang</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <%--   <link href="style.css" rel="stylesheet" />--%>
+    <link href="index.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <script type="text/javascript" src="JavaScript.js">
+    </script>
+    <form id="form1" runat="server">
+        <div class="main">
+            <div class="header" id="topp">
+                <div class="logo">
+                    <a href="index.aspx#">
+                        <img src="image/shogiay1.png" width="130">
+                    </a>
+                </div>
+                <div class="search">
+                    <asp:TextBox ID="txtsearch" runat="server" placeholder="Nhập hãng sản phẩm muốn tìm..."></asp:TextBox>
+                    <asp:Button ID="btnsearch" runat="server" Text="Tìm" CssClass="btn1" OnClick="btnSearch_click" />
+                </div>
+
+                <div class="cart" style="padding: 6px 0 6px 6px;">
+                    <img src="image/giohang.png" width="20">
+                    <a class="cart_head"  href="cart.aspx">Giỏ hàng</a> <small (<asp:Label ID="TotalProductCount" runat="server" Text=""></asp:Label> ) </small>
+                </div>
+            </div>
+            <div class="header-sub">
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.aspx#">Trang Chủ</a></li>
+                        <li><a href="Child_page.aspx?type=Giày Adidas">Áo Thun</a></li>
+                        <li><a href="Child_page.aspx?type=Giày Nike">Áo Thu Đông</a></li>
+                        <li><a href="Child_page.aspx?type=Giày Balenciaga">Áo Sơ Mi</a></li>
+                        <li><a href="Child_page.aspx?type=Giày Vans">Áo Hoodie</a></li>
+                        <li><a href="Child_page.aspx?type=Giày Converse">Áo Phông</a></li>
+                        <!-- <li><a href="intro.aspx">Giới Thiệu</a></li> -->
+                        <li id="loregisterlogin" runat="server"></li>
+                    </ul>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer id="ft">
+                <ul style="width: 1090px; padding-top: 45px; margin-bottom: 0px;">
+                    <li>
+                        <div class="text">
+                            <h4>AboutUs</h4>
+                            <div>
+                                <hr>
+                                Hệ thống thời trang số 1<br />
+                                Store 1: 96 Định Công<br />
+                                Store 2: 29 Trần Đại Nghĩa
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="text">
+                            <h4>Office Hours</h4>
+                            <div>
+                                <hr style="width: 193px;">
+                                Monday - Friday: 8h - 22h
+		        <br>
+                                Saturday & Sunday: 9h - 23h
+		        <br>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="text">
+                            <h4>Conntact Us</h4>
+                            <div>
+                                <hr style="width: 168px;">
+                                Phone: 012345678
+		        <br>
+                                Email: quanhprx@gmail.com
+                                <br />
+                                Email: hangbeo2306@gmail.com<br />
+                                Email: vumyduyen1407@gmail.com<br />
+                                Address: 96 Định Công
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
+<style>
+	
+
+
+	</style>
